@@ -1,20 +1,20 @@
 // implemente aqui as funções de teste
 function testeReverseString1() {
-    let result = Kata1("Kenzie Academy");
+    let result = reverseString("Kenzie Academy");
     let expected = "ymedacA eizneK";
     console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
  }
 
  function testeReverseString2() {
-    let result = Kata1("lotus Academy");
+    let result = reverseString("lotus Academy");
     let expected = "ymedacA sutol";
     console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
  }
 
 
- const Kata1 = (katas)=> {
- let kata =katas.split("").reverse().join("");
-    return kata;
+ const reverseString = (katas)=> {
+    let reverte =katas.split("").reverse().join("");
+        return reverte;
 
  }
  
@@ -23,36 +23,36 @@ function testeReverseString1() {
 
 
  function testReverseSentence1(){
-    let result = Kata2("lotus Academy");
+    let result = reverseSentence("lotus Academy");
     let expected = "Academy lotus";
     console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
  }
  function testReverseSentence2(){
-    let result = Kata2("calvin Acad");
+    let result = reverseSentence("calvin Acad");
     let expected = "Acad calvin";
     console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
  }
- const Kata2 = (katas)=> {
-    let kata =katas.split(" ").reverse().join(" ");
-    return kata;   
+ const reverseSentence = (katas)=> {
+    let reverteTexto =katas.split(" ").reverse().join(" ");
+         return reverteTexto;   
     }
 
 
 /**/
 
 function testMinimumValue1(){
-    let result = kata3([1,2,4,3,5,6,7,8,9,0]);
+    let result = minimumValue([1,2,4,3,5,6,7,8,9,0]);
     let expected = 0;
     console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
 
 }
 function testMinimumValue2(){
-    let result = kata3([-1,2,4,3,5,6,7,8,9,0]);
+    let result = minimumValue([-1,2,4,3,5,6,7,8,9,0]);
     let expected = -1;
     console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
 
 }
-const kata3 = (katas)=>{
+const minimumValue = (katas)=>{
 
     return Math.min(...katas);
 }
@@ -62,17 +62,17 @@ const kata3 = (katas)=>{
 
 
 function testMaximumValue1(){
-    let result = kata4([-1,2,4,3,5,6,7,8,9,0]);
+    let result = maximumValue([-1,2,4,3,5,6,7,8,9,0]);
     let expected = 9;
     console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
 
 }
 function testMaximumValue2(){
-    let result = kata4([11,2,4,3,5,6,7,8,9,0]);
+    let result = maximumValue([11,2,4,3,5,6,7,8,9,0]);
     let expected = 11;
     console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
 }
-const kata4 = (katas)=>{
+const maximumValue = (katas)=>{
     return Math.max(...katas);
 }
 
@@ -80,16 +80,16 @@ const kata4 = (katas)=>{
 /**/
 
 function testCalculateRemainder1(){
-    let result = kata5(8,3);
+    let result = calculateRemainder(8,3);
     let expected = 2;
     console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
 }
 function testCalculateRemainder2(){
-    let result = kata5(19,3);
+    let result = calculateRemainder(19,3);
     let expected = 1;
     console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
 }
-const kata5 = (dividendo, divisor)=> {
+const calculateRemainder = (dividendo, divisor)=> {
     valor = dividendo%divisor;
     return valor;
 }
@@ -97,17 +97,17 @@ const kata5 = (dividendo, divisor)=> {
 
 /**/
  function testDistinctValues1(){
-     let result = kata6("1 1 1 2 2 3 4 5 6 6 7 8");
+     let result = distinctValues("1 1 1 2 2 3 4 5 6 6 7 8");
      let expected ="1 2 3 4 5 6 7 8";
      console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`);
 
  }
  function testDistinctValues2(){
-     let result = kata6("11 11 11 12 12 1 1 2 2 3 3 4 4 5 5 5 6 7 8 9");
+     let result = distinctValues("11 11 11 12 12 1 1 2 2 3 3 4 4 5 5 5 6 7 8 9");
      let expected ="11 12 1 2 3 4 5 6 7 8 9";
      console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
  }
-const kata6 = (arr)=>{
+const distinctValues = (arr)=>{
 let valorArr=arr.split(" ");
 let valor2=[];
 let contador2=0;
@@ -124,17 +124,17 @@ return valor2;
 
 /* */
 function testCountValues1(){
-    let result = kata7("1 1 1 2 3 3 4 4 4 4 5 5 6 7 8 8 8 8 9 9 9 9 10 10 10 ");
+    let result = countValues("1 1 1 2 3 3 4 4 4 4 5 5 6 7 8 8 8 8 9 9 9 9 10 10 10 ");
     let expected = "1: 3 2: 1 3: 2 4: 4 5: 2 6: 1 7: 1 8: 4 9: 4 10: 3";
     console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
 }
  function testCountValues2(){
-     let result = kata7("1 1 1 1 2 3 3 4 4 4 4 5 5 6  7 8 8 8 8");
+     let result = countValues("1 1 1 1 2 3 3 4 4 4 4 5 5 6  7 8 8 8 8");
      let expected = '1: 4 2: 1 3: 2 4: 4 5: 2 6: 1 7: 1 8: 4';
      console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
  }
 
-const kata7 = (arr)=>{
+const countValues = (arr)=>{
     let total =arr.split(' ');
     let valorArr=[];
     let contador2=0;
@@ -161,84 +161,84 @@ return respostaContador2;
 
 /* */
 function testEvaluateExpression() {
-    let result = kata8("a + b + c - d", {a: 1, b: 7, c: 3, d: 14});
+    let result = evaluateExpression("a + b + c - d", {a: 1, b: 7, c: 3, d: 14});
     let expected = -3
     console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
  }
 
  function testEvaluateExpression1() {
-    let result = kata8("a + b + c - d", {a: 11, b: 7, c: 3, d: 14});
+    let result = evaluateExpression("a + b + c - d", {a: 11, b: 7, c: 3, d: 14});
     let expected = 7
     console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
  }
 
 function testEvaluateExpression2() {
-    let result = kata8("a - b - c + d", {a: 1, b: 7, c: 3, d: 14});
+    let result = evaluateExpression("a - b - c + d", {a: 1, b: 7, c: 3, d: 14});
     let expected = 5
     console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
  }
-const kata8 = (expressao, objets) => {
-let a = objets.a;
-let b = objets.b;
-let c = objets.c;
-let d = objets.d;
-let calcula =0;
+const evaluateExpression = (expressao, objets) => {
+    let a = objets.a;
+    let b = objets.b;
+    let c = objets.c;
+    let d = objets.d;
+    let calcula =0;
 
-if(expressao[0]==="a"){
-    calcula =a;
-}else if(expressao[0]==="b"){
+        if(expressao[0]==="a"){
+            calcula =a;
+        }else if(expressao[0]==="b"){
     calcula =b;
-}else if(expressao[0]==="c"){
+        }else if(expressao[0]==="c"){
     calcula =c;
-}else if(expressao[0]==="d"){
-    
-}else if(expressao[0]==="d"){
+        }else if(expressao[0]==="d"){
+        }else if(expressao[0]==="d"){
     calcula =d;
-}
-for(let contador =1;contador<expressao.length;contador++){
-if(expressao[contador]==="+"){
-    if(expressao[contador+2]==="a"){
-        calcula+=a;
-    }else if(expressao[contador+2]==="b"){
-        calcula+=b;
-    }else if(expressao[contador+2]==="c"){
-        calcula+=c;
-    }else if(expressao[contador+2]==="d"){
-        calcula+=d;
-    }
-}else if(expressao[contador]==="-"){
-    if(expressao[contador+2]==="a"){
-        calcula-=a;
-    }else if(expressao[contador+2]==="b"){
-        calcula-=b;
-    }else if(expressao[contador+2]==="c"){
-        calcula-=c;
-    }else if(expressao[contador+2]==="d"){
-        calcula-=d;
-    }
-}else if(expressao[contador]==="*"){
-    if(expressao[contador+2]==="a"){
-        calcula*=a;
-    }else if(expressao[contador+2]==="b"){
-        calcula*=b;
-    }else if(expressao[contador+2]==="c"){
-        calcula*=c;
-    }else if(expressao[contador+2]==="d"){
-        calcula*=d;
-    }
+        }
+    for(let contador =1;contador<expressao.length;contador++){
+        if(expressao[contador]==="+"){
+            if(expressao[contador+2]==="a"){
+                calcula+=a;
+            }else if(expressao[contador+2]==="b"){
+                calcula+=b;
+            }else if(expressao[contador+2]==="c"){
+                calcula+=c;
+            }else if(expressao[contador+2]==="d"){
+                calcula+=d;
+            }
+        }else if(expressao[contador]==="-"){
+            if(expressao[contador+2]==="a"){
+                 calcula-=a;
+            }else if(expressao[contador+2]==="b"){
+                calcula-=b;
+            }else if(expressao[contador+2]==="c"){
+                calcula-=c;
+            }else if(expressao[contador+2]==="d"){
+                calcula-=d;
+            }
+        }else if(expressao[contador]==="*"){
+            if(expressao[contador+2]==="a"){
+                calcula*=a;
+            }else if(expressao[contador+2]==="b"){
+                calcula*=b;
+            }else if(expressao[contador+2]==="c"){
+                calcula*=c;
+            }else if(expressao[contador+2]==="d"){
+                calcula*=d;
+             }
 
-}else if(expressao[contador]==="/"){
-    if(expressao[contador+2]==="a"){
-        calcula/=a;
-    }else if(expressao[contador+2]==="b"){
-        calcula/=b;
-    }else if(expressao[contador+2]==="c"){
-        calcula/=c;
-    }else if(expressao[contador+2]==="d"){
-        calcula/=d;
-    }   }
+        }else if(expressao[contador]==="/"){
+           if(expressao[contador+2]==="a"){
+            calcula/=a;
+            }else if(expressao[contador+2]==="b"){
+            calcula/=b;
+            }else if(expressao[contador+2]==="c"){
+            calcula/=c;
+            }else if(expressao[contador+2]==="d"){
+            calcula/=d;
+            } 
+        }
     }
-return calcula;
+    return calcula;
 }
 
  testeReverseString1();
